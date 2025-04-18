@@ -12,21 +12,23 @@ class CalculatorTest {
 
     @Test
     void dif() {
-        assertEquals(2, calc.dif(3, 1));
+        assertEquals(3, calc.dif(4, 1));
     }
 
     @Test
     void div() {
-        assertEquals(2, calc.div(2, 1));
+        assertEquals(3, calc.div(6, 2));
+
     }
 
     @Test
     void times() {
-        assertEquals(1, calc.times(2, 2));
+        assertEquals(8, calc.times(2, 4));
     }
 
     @Test
     void solver() {
-        assertEquals(1, calc.solver(2, 1));
+        assertEquals(4, calc.solver());
+
     }
 }
