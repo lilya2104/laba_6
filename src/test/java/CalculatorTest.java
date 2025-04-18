@@ -18,6 +18,7 @@ class CalculatorTest {
     @Test
     void div() {
         assertEquals(3, calc.div(6, 2));
+
     }
 
     @Test
@@ -28,5 +29,6 @@ class CalculatorTest {
     @Test
     void solver() {
         assertEquals(4, calc.solver());
+
     }
 }
