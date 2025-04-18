@@ -16,10 +16,8 @@ public class Calculator {
         return a*b;
     }
     public int solver(){
-        // solving (5-1)*(4+2)/6 = ?
-        int differ = dif(5, 1);
-        int summ = add(2, 4);
-        int result = times(summ, differ);
-        return div(result, 6);
+        int res = this.times(this.div(this.add(16, 5), this.dif(16, 9)), this.add(7, -11));
+        return res;
+        //-12
     }
 }
