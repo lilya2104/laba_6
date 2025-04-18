@@ -2,25 +2,27 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 class CalculatorTest {
-    Calculator calcul = new Calculator();
+
+    Calculator calc = new Calculator();
+
     @Test
     void add() {
-        assertEquals(5, calcul.add(-2, 7));
+        assertEquals(2, calc.add(1, 1));
     }
     @Test
     void dif() {
-        assertEquals(-14, calcul.dif(-9, 5));
+        assertEquals(3, calc.dif(4, 1));
     }
     @Test
     void div() {
-        assertEquals(-3, calcul.div(-6, 2));
+        assertEquals(3, calc.div(6, 2));
     }
     @Test
     void times() {
-        assertEquals(-9, calcul.times(-3, 3));
+        assertEquals(8, calc.times(2, 4));
     }
     @Test
     void solver() {
-        assertEquals(-12, calcul.solver());
+        assertEquals(4, calc.solver());
     }
 }

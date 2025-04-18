@@ -6,8 +6,11 @@ public class Calculator {
         return a-b;
     }
     public int div(int a, int b){
-        if (b != 0) return a/b;
-        return 0;
+        if (b != 0) {
+            return a / b;
+        } else {
+            throw new IllegalArgumentException("You can't divide by zero");
+        }
     }
     public int times(int a, int b){
         return a*b;
