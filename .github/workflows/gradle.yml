@@ -18,18 +18,24 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        version: [11, 13, 17]
+      
+    runs-on: ${{os}}
+      permissions:
+        contents: read
+    
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up JDK 17
+    - name: Set up JDK ${{version}}
       uses: actions/setup-java@v4
       with:
-        java-version: '17'
+        java-version: ${{version}}
         distribution: 'temurin'
+
 
     # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
